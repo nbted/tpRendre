@@ -1,0 +1,628 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API GESTIONS BIBLIOTHEQUE_LIVRE",
+		"_postman_id": "9a390d53-22ca-ac86-e5eb-8565c0de1906",
+		"description": "cette api REST gère une bibliothèque vu comme une entité dans laquelle on y trouve des Livres vu aussi comme une entité",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ENTITE LIVRE",
+			"description": "contient les requêtes en rapport avec les livres",
+			"item": [
+				{
+					"name": "GET_LIVRE",
+					"request": {
+						"url": "http://127.0.0.1:8085/api/livre/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "JSON",
+								"description": ""
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5ODAxOTU2LCJpYXQiOjE1MDk3OTgzNTZ9._Kd3GykN8HIwiNnDoeaZW_ikqSfGYFmM1hKaWrrlZIM",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "ça recupere une ressource selon l'id donné"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_LIVRE",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/livre?id=1&nom=mes visites58&author=hugo  KWIZERA1&dateParution=2014-04-02T22:00:00Z&isbn=AGSKSL45",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"livre"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "nom",
+									"value": "mes visites58",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "author",
+									"value": "hugo  KWIZERA1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "dateParution",
+									"value": "2014-04-02T22:00:00Z",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "isbn",
+									"value": "AGSKSL45",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "bibliotheque.id",
+									"value": "2",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": "met à jour une instance d'un livre"
+					},
+					"response": []
+				},
+				{
+					"name": "POST_LIVRE",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/livre?id=4&nom=my stories&author=hugo teddy&dateParution=2014-04-02T22:00:00Z&isbn=AGSKSL45&bibliotheque.id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"livre"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "nom",
+									"value": "my stories",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "author",
+									"value": "hugo teddy",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "dateParution",
+									"value": "2014-04-02T22:00:00Z",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "isbn",
+									"value": "AGSKSL45",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "bibliotheque.id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "cree une nouvelle instance d'une livre"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_LIVRES",
+					"request": {
+						"url": "http://127.0.0.1:8085/api/livres",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json",
+								"description": ""
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5ODAxOTU2LCJpYXQiOjE1MDk3OTgzNTZ9._Kd3GykN8HIwiNnDoeaZW_ikqSfGYFmM1hKaWrrlZIM",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "retourne une collection des livres"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_LIVRE",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/livre/?id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"livre",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "supprime un livre donné"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ENTITE BIBLIOTHEQUE",
+			"description": "",
+			"item": [
+				{
+					"name": "PUT_BIBLIO",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/bibliotheque/\n?adresse=25 rue robert latouche&anneeConstruction=1990&id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"query": [
+								{
+									"key": "nom",
+									"value": "bibliotheque de la monarchie romaine",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "adresse",
+									"value": "25 rue robert latouche",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "anneeConstruction",
+									"value": "1990",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5NzAzNjM3LCJpYXQiOjE1MDk3MDAwMzd9.lPhriiHyhbEzrdVzM3jZW9P6HFgjkVLvN5Tn0lnBlHQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "ajoute une instance de bibliothèque"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_BIBLIO",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/bibliotheque/\n?id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5NTU1MDIyLCJpYXQiOjE1MDk1NTE0MjJ9.wnAHDbF6DI5e7xRnc3Wzr92w1u6g2Df29uDOYZVX3dw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "revoi une bibliotheque"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_BIBLIOS",
+					"request": {
+						"url": "http://127.0.0.1:8085/api/bibliotheques",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "renvoi une collection des bibliotheque"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_BIBLIO",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/bibliotheque\n?id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"query": [
+								{
+									"key": "id",
+									"value": "3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "supprime une instance d'une bibliotheque"
+					},
+					"response": []
+				},
+				{
+					"name": "POST_BIBLIO",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/bibliotheque/\n?nom=bibliotheque de la monarchie romaine&adresse=25 rue robert latouche&anneeConstruction=1990",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"query": [
+								{
+									"key": "nom",
+									"value": "bibliotheque de la monarchie romaine",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "adresse",
+									"value": "25 rue robert latouche",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "anneeConstruction",
+									"value": "1990",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "cree une nouvelle instance de bibliotheque"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ENTITES_LIEES",
+			"description": "contient des requetes pour des ressources liées",
+			"item": [
+				{
+					"name": "GET_BIBLIO_ID_LIVRE _ID",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/api/bibliotheque/1/livre/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"bibliotheque",
+								"1",
+								"livre",
+								"2"
+							],
+							"query": [
+								{
+									"key": "X-Auth-Token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5NTU2MjA2LCJpYXQiOjE1MDk1NTI2MDZ9.ID1K8bRdYKXb9cPo3LPSphlst-aL2VH9tY5fs9fF-HY",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json",
+								"description": ""
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJINHNJQUFBQUFBQUFBSlZTTVU4Yk1SUitGeEpSaEZTZ0VwVTZ3QUxkMEVXQ01WTkJBYWs2QlVUSVFxVld6dDNqTVBqc3dcL1pCc2xTWnlwQUJSSXVFMUxValwvd1NXXC9vQ3FIYm95ZCszelFiakFndkJrUDNcLyt2dmQ5ejVjM1VERWFsbUxOdURCK0tyS1lTOStrbXN2WVlKaHBicnQrWmxCSGFIUEVXZzVzVVFWdWwxY0NMNEFTanl5OEN2YllJYXNLSnVQcWVuc1BRMXZyYUZoVU9yNWozTkVzd1NPbDlcLzE3N2xCcGZDQlFVSHNcL1NqQzZEVk1zREZVbWJVUEplaWZsR3FOdG1DeHFnUXIzWFdrNnBCdVVsak5oaHFHaktGbGJZQlRBT012c3JpSlZqc2JDeEcyem1lV2kya1JiQytCRnlveWg3aDQ1YVZyWHVydDNiVXB5Y0FDZm9keEpQVnFVM1ZzSDlSMlB2NktFSU5kY1NUUGZrb21LK0E1MzRzVGZtem43ZWZLOTF5b0JVQ1lMVDc4cDZtK1dvWGYxOGQ5c0hyUVhXbmc5MUhvQnEzVlM2bWFxWU43UzZKUlwvWFd4OFBiODVcL2pCQ3lnNngrdng1ekwrN1M2NjdvcEtVYVdiVjBJeUk5cWpzOWtTK1wvRFQ1WUFwZHY4bVRWQ0Q5S0dreHVwY29pTWx1V1NzeHlOdkMyT1o2VVBcL1VhdFkzM2FsQ3I2SXVpYjdNUGJ0aCtZR2lVZlhcL25sNmZ6UDBtZ3ZkUU9XUWlRNHA4c2dBMXNxU04rc3ZsK2N6NHR6XC85M01EZ01cLzhIR25qekh4QURBQUE9Iiwic3ViIjoidGVkZHkiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNTA5ODAxOTU2LCJpYXQiOjE1MDk3OTgzNTZ9._Kd3GykN8HIwiNnDoeaZW_ikqSfGYFmM1hKaWrrlZIM",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "recupere une collection des livres à partir d'un ID d'une bibliotheque connu"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_BIBLIO_ID_LIVRE_ID",
+					"request": {
+						"url": "",
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"description": "recupere une collection des livres à partir d'un ID d'une bibliotheque connu"
+					},
+					"response": []
+				},
+				{
+					"name": "POST_BIBLIO_ID_LIVRE_ID",
+					"request": {
+						"url": {
+							"raw": "http://127.0.0.1:8085/bibliotheque/2/livre/?id=4&nom=histoiure de love&author=hugo schavez&dateParution=2014-04-02T22:00:00Z&isbn=AGSKSL45&bibliotheque.id=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8085",
+							"path": [
+								"bibliotheque",
+								"2",
+								"livre",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "nom",
+									"value": "histoiure de love",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "author",
+									"value": "hugo schavez",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "dateParution",
+									"value": "2014-04-02T22:00:00Z",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "isbn",
+									"value": "AGSKSL45",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "bibliotheque.id",
+									"value": "4",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "recupere une collection des livres à partir d'un ID d'une bibliotheque connu"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_BIBLIO_ID_LIVRES",
+					"request": {
+						"url": "http://127.0.0.1:8085/bibliotheque/4/livres/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "recupere une collection des livres à partir d'un ID d'une bibliotheque connu"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_BIBLIO_ID_LIVRE_ID",
+					"request": {
+						"url": "http://127.0.0.1:8085/bibliotheque/1/livre/9",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "recupere une collection des livres à partir d'un ID d'une bibliotheque connu"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IN_OUT",
+			"description": "ce dossier contient les requetes pour la connexion et la déconnection",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"url": "http://127.0.0.1:8085/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\": \"teddy\", \"password\": \"teddy\"}"
+						},
+						"description": "requête pour se connecter à notre API.tout utilisateur doit d'abord s'authentifier pour accéder à notre API"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"url": "http://127.0.0.1:8085/api/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "cette requete est lancée lorsqu'on veut quitter l'API.( se deconnecter.)"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
